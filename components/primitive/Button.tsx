@@ -1,5 +1,5 @@
 import { TouchableOpacity, TouchableOpacityProps } from 'react-native';
-import { tv, VariantProps } from 'tailwind-variants';
+import { type VariantProps, tv } from 'tailwind-variants';
 
 import SpinLoader from './SpinLoader';
 
@@ -29,10 +29,15 @@ const Button = ({
   startIcon,
   endIcon,
   children,
+  disabled,
   ...props
 }: ButtonProps) => {
   return (
-    <TouchableOpacity {...props} className={button({ variant, className })}>
+    <TouchableOpacity
+      {...props}
+      disabled={disabled || isLoading}
+      className={button({ variant, className })}
+    >
       {startIcon}
       {isLoading && <SpinLoader color="white" />}
       {!isLoading && children}
