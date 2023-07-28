@@ -4,7 +4,7 @@ import { type VariantProps, tv } from 'tailwind-variants';
 import SpinLoader from './SpinLoader';
 
 const button = tv({
-  base: 'px-3 py-2 rounded-xl',
+  base: 'px-3 h-[48px] flex justify-center items-between py-2 rounded-xl',
   variants: {
     variant: {
       contained:

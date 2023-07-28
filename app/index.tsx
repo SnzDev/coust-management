@@ -2,6 +2,7 @@ import { useColorScheme } from 'nativewind';
 import { Text, View } from 'react-native';
 
 import ButtonDarkMode from '../components/container/ButtonDarkMode';
+import Input from '../components/primitive/Input';
 
 export default function Home() {
   const { colorScheme } = useColorScheme();
@@ -15,6 +16,8 @@ export default function Home() {
       </Text>
 
       <ButtonDarkMode />
+
+      <Input />
     </View>
   );
 }
